@@ -1,0 +1,21 @@
+	std::ofstream fout;
+	fout.open("generatedMandelbrotImage.ppm");
+	if(!fout){
+		throw "Error opening file\n";
+	}
+
+	fout << "P3\n" << XPIXELS << " " << YPIXELS << std::endl << "255" << std::endl;
+
+
+			//print colors to files
+			if(iterations == MAX_ITER){
+				fout << "0 0 0 ";
+			}
+			else{
+				fout << colorIndexLookup(renormalizedCount).red << " "
+					<< colorIndexLookup(renormalizedCount).green << " "
+					<< colorIndexLookup(renormalizedCount).blue << " ";
+			}
+			iterations = 0;
+		}
+		fout << std::endl;

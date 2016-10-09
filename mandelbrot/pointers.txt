@@ -1,0 +1,31 @@
+shared_ptr:
+
+//leakes memory like a sin
+void foo()
+{
+	auto pointer = new widget();
+	bar();
+	delete pointer;
+	pointer = NULL;
+}
+
+RAII - resource aquisition is initialization
+
+void foo()
+{
+	//default for this class, pretty good
+	auto pointer = std::make_shared<widget>(...);
+	bar();
+	//done
+}
+std::unique_ptr<widget>(new widget()); //not necessary for c++14
+
+AAA style -
+	- almost always auto
+	- declare variables using the auto keyword
+		prevents casts
+		prevents uninitialized variables
+		supports refactoring
+
+auto x = static_cast<uint8_t>(3);
+

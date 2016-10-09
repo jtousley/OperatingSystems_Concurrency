@@ -1,0 +1,22 @@
+Threading
+
+while(1){
+	if(x == 0){ x++; }
+}
+
+while(1){
+	if(x==1){ x--; }
+}
+
+-- 2 threads accessing the same memory and at least 1 of them writing to it
+	- Data race
+	- Make it const!
+
+MyWidget const A;
+
+class MyWidget{
+	int a;
+	int b;
+
+	MyWidget : a(), b(){}
+};

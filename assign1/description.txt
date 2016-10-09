@@ -1,0 +1,13 @@
+Create the following tools which will be used in later assignments.  
+Avoid the for and while keywords
+
+A function that computes the standard deviation of elements in any 
+container
+A function that computes the average (mean) of elements in any container
+A function that times the processing of another function
+A function that repeatedly invokes another function, and returns the 
+average and standard deviation of the time taken.
+The called function should be able to have any reasonable signature
+Also prepare a main function that demonstrates the capabilities of your 
+toolset.
+
